@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Dia das Mães</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #fffaf0, #ffe4e1);
+      color: #5a2a27;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #d94f4f;
+    }
+
+    .frases {
+      font-size: 1.5em;
+      margin: 30px auto;
+      max-width: 800px;
+      min-height: 80px;
+      font-style: italic;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    button {
+      background-color: #d94f4f;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 40px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c13e3e;
+    }
+
+    .texto-revelado {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.2em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(217, 79, 79, 0.2);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #a07a7a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Feliz Dia das Mães 💐</h1>
+
+  <div class="frases" id="frase">
+    "Mãe, o seu amor é a luz que ilumina meu caminho."
+  </div>
+
+  <button onclick="revelarTexto()">Clique aqui, mãe 💖</button>
+
+  <div class="texto-revelado" id="textoBonito">
+    <p>
+      Hoje o abraço tem um peso diferente. O seu cheiro, seu sorriso, sua presença… tudo parece mais forte, mais intenso. Talvez seja porque, no fundo, eu já saiba: este será nosso último Dia das Mães lado a lado por um tempo. Dois anos. Dois longos anos em que a saudade vai ser companhia constante, onde sua voz vai chegar por mensagens, suas broncas serão lembrança, e seu colo… ah, o seu colo vai morar no meu coração até que eu possa senti-lo de novo.
+
+Mãe, você é a mulher mais forte que eu conheço. É o tipo de força que me da exemplo de como ser, mas que segura o mundo com um olhar sincero e um abraço firme. Mesmo nos momentos em que tudo parecia desmoronar, lá estava você: erguida, guerreira, com um sorriso no rosto e o coração em chamas de amor. Nunca vi alguém amar tão profundamente, cuidar tão intensamente, se doar tão completamente.
+
+Eu tenho um orgulho imenso de ser seu filho. E mesmo que às vezes eu não tenha sido o melhor, mesmo que em alguns momentos eu tenha deixado de demonstrar tudo que sinto, por dentro há um amor que não cabe em palavras. Me perdoa pelas vezes em que fui impaciente, distraído ou distante. Estou aprendendo. Estou crescendo. E vou me tornar alguém que você se orgulhe ainda mais.
+
+A distância vai doer, eu sei. Mas também vai me ensinar. Vai me mostrar o valor dos momentos, o peso de cada palavra sua, e a beleza de tudo que você sempre foi pra mim. E quando eu voltar, mãe, quero que veja em mim o reflexo de tudo que você plantou: a força, a bondade, o cuidado, a coragem.
+
+Hoje, mais do que nunca, eu te celebro. Não apenas como mãe, mas como a mulher incrível que é. Te amo com tudo que sou — e te levo comigo, onde quer que eu vá.
+
+Feliz Dia das Mães. Até logo. 💖
+    </p>
+  </div>
+
+  <footer>
+    Criado com muito amor ❤️
+  </footer>
+
+  <script>
+    const frases = [
+      "Mãe, o seu amor é a luz que ilumina meu caminho.",
+      "Se eu pudesse te dar o mundo, ele ainda seria pequeno perto do seu amor.",
+      "Seu colo é meu abrigo, sua voz é minha canção favorita.",
+      "Você é a definição mais pura de amor.",
+      "De todos os presentes que já ganhei na vida, você é o maior de todos.",
+      "Ser sua filha/filho é a minha maior sorte.",
+      "Teu amor é eterno, tua presença é bênção.",
+      "Mãe: a palavra mais doce que existe no dicionário da vida."
+    ];
+
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % frases.length;
+      const fraseEl = document.getElementById("frase");
+      fraseEl.style.opacity = 0;
+      setTimeout(() => {
+        fraseEl.textContent = frases[index];
+        fraseEl.style.opacity = 1;
+      }, 500);
+    }, 4000);
+
+    function revelarTexto() {
+      document.getElementById("textoBonito").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
